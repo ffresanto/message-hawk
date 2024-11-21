@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageHawk.Outbox", "MessageHawk.Outbox", "{58268A06-113A-4D19-9F6F-F0FD7847F80D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{99E08F59-2024-4307-BC74-A773B659D0C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageHawk.Inbox", "MessageHawk.Inbox", "{D50D2040-660D-49B8-ACD4-F55BEA410C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHawk.Outbox.Domain", "src\MessageHawk.Outbox\MessageHawk.Outbox.Domain\MessageHawk.Outbox.Domain.csproj", "{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHawk.Outbox.Application", "src\MessageHawk.Outbox\MessageHawk.Outbox.Application\MessageHawk.Outbox.Application.csproj", "{C560E58F-46F3-4355-8AF0-C5FB99B3E94C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHawk.Outbox.Infrastructure", "src\MessageHawk.Outbox\MessageHawk.Outbox.Infrastructure\MessageHawk.Outbox.Infrastructure.csproj", "{5FA99FA6-714C-4008-8030-24F33DCAB90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHawk.Outbox.WebAPI", "src\MessageHawk.Outbox\MessageHawk.Outbox.WebAPI\MessageHawk.Outbox.WebAPI.csproj", "{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C560E58F-46F3-4355-8AF0-C5FB99B3E94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C560E58F-46F3-4355-8AF0-C5FB99B3E94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C560E58F-46F3-4355-8AF0-C5FB99B3E94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C560E58F-46F3-4355-8AF0-C5FB99B3E94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA99FA6-714C-4008-8030-24F33DCAB90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA99FA6-714C-4008-8030-24F33DCAB90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA99FA6-714C-4008-8030-24F33DCAB90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA99FA6-714C-4008-8030-24F33DCAB90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58268A06-113A-4D19-9F6F-F0FD7847F80D} = {99E08F59-2024-4307-BC74-A773B659D0C2}
+		{D50D2040-660D-49B8-ACD4-F55BEA410C85} = {99E08F59-2024-4307-BC74-A773B659D0C2}
+		{BCEBC4E8-CD3E-4673-8638-A7682E9C99BC} = {58268A06-113A-4D19-9F6F-F0FD7847F80D}
+		{C560E58F-46F3-4355-8AF0-C5FB99B3E94C} = {58268A06-113A-4D19-9F6F-F0FD7847F80D}
+		{5FA99FA6-714C-4008-8030-24F33DCAB90E} = {58268A06-113A-4D19-9F6F-F0FD7847F80D}
+		{7D9CE847-2366-4D16-A5DB-B4AC75BDC90F} = {58268A06-113A-4D19-9F6F-F0FD7847F80D}
+	EndGlobalSection
+EndGlobal

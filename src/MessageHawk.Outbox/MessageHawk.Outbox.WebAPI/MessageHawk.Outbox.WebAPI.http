@@ -1,0 +1,6 @@
+@MessageHawk.Outbox.WebAPI_HostAddress = http://localhost:5123
+
+GET {{MessageHawk.Outbox.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
