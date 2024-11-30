@@ -2,6 +2,6 @@
 {
     public interface IRabbitMqProvider
     {
-        public Task PublishMessageAsync<T>(T message);
+        public Task PublishMessageAsync<T>(T message, string queueName);
     }
 }

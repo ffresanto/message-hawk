@@ -1,5 +1,6 @@
 ﻿using MessageHawk.Outbox.Domain.Interfaces.Providers;
 using MessageHawk.Outbox.Infrastructure.Providers;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MessageHawk.Outbox.Infrastructure.Configurations
