@@ -1,4 +1,7 @@
+using MessageHawk.Inbox.Infrastructure.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionStringSqlite = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 
@@ -6,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSqliteDbContext(connectionStringSqlite);
 
 var app = builder.Build();
 
