@@ -1,19 +1,28 @@
+using MessageHawk.Inbox.Infrastructure.Configurations;
 using MessageHawk.Inbox.Infrastructure.Extensions;
+using MessageHawk.Inbox.Application.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionStringSqlite = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.RepositoriesDependencies();
+builder.Services.ServicesDependencies();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "MessageHawk.Inbox.WebAPI (Consumer)",
+        Version = "v1"
+    });
+    c.EnableAnnotations();
+});
+
 builder.Services.AddSqliteDbContext(connectionStringSqlite);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
