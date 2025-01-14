@@ -6,9 +6,14 @@ namespace MessageHawk.Inbox.Application.Services
 {
     public class EnvelopeService(IEnvelopeRepository envelopeRepository) : IEnvelopeService
     {
-        public Task<List<Envelope>> GetEnvelopes()
+        public async Task<List<Envelope>> GetEnvelopes()
         {
-            return envelopeRepository.GetAllEnvelopes();
+            return await envelopeRepository.GetAllEnvelopes();
+        }
+
+        public async Task SaveEnvelope(Envelope envelope)
+        {
+            await envelopeRepository.SaveEnvelope(envelope);
         }
     }
 }

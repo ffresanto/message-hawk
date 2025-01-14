@@ -1,6 +1,7 @@
 using MessageHawk.Inbox.Infrastructure.Configurations;
 using MessageHawk.Inbox.Infrastructure.Extensions;
 using MessageHawk.Inbox.Application.Configurations;
+using MessageHawk.Inbox.Application.MessageBroker;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionStringSqlite = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -19,7 +20,9 @@ builder.Services.AddSwaggerGen(c =>
     c.EnableAnnotations();
 });
 
+builder.Services.Configure<RabbitMqConfiguration>(builder.Configuration.GetSection("RabbitMQ"));
 builder.Services.AddSqliteDbContext(connectionStringSqlite);
+builder.Services.AddHostedService<MessageHawkConsumerService>();
 
 var app = builder.Build();
 
